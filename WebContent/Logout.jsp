@@ -8,7 +8,15 @@
 </head>
 <body>
 
-<h1>Error Page</h1>
+
+<%
+
+if(session!=null)
+{
+ session.invalidate();
+ response.sendRedirect("Login.jsp");
+}
+%>
 
 </body>
 </html>

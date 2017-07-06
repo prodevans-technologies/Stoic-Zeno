@@ -1,4 +1,6 @@
 <%
+
+
 if( (session.getAttribute("user"))!= null )
 {
      response.sendRedirect("Dashboard.jsp");
@@ -17,7 +19,13 @@ else
 <title>Insert title here</title>
 </head>
 <body>
+<%
+if(request.getParameter("error")!=null)
+{
+	out.print("Login fail!!!<br>");
+}
 
+%>
 
 <form action="LoginController" method="POST" >
 

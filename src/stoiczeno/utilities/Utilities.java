@@ -3,7 +3,7 @@ package stoiczeno.utilities;
 public 	interface Utilities
 {
 	public String DBUserName="root";
-	public String DBPassword="";
+	public String DBPassword="root";
 	public String DBHost="localhost";
 	public String DBPort="3306";
 	public String DBName="stoiczeno";	

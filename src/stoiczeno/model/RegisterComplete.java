@@ -7,6 +7,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import stoiczeno.pojo.RegistrationDetails;
+import stoiczeno.utilities.Utilities;
+
 public class RegisterComplete extends Utilities
 {
 

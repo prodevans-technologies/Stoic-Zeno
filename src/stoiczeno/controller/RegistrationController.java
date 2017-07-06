@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import stoiczeno.model.RegisterComplete;
-import stoiczeno.model.RegistrationDetails;
+import stoiczeno.pojo.RegistrationDetails;
 
 public class RegistrationController extends HttpServlet 
 {

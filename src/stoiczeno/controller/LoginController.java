@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import stoiczeno.model.Authenticator;
-import stoiczeno.model.UserDetails;
+import stoiczeno.pojo.ZenoUser;
 
 public class LoginController extends HttpServlet
 {
@@ -33,7 +33,7 @@ public class LoginController extends HttpServlet
 			boolean result=ath.authenticate(username, password);
 			if(result)
 			{
-				UserDetails ud=new UserDetails(username,password);
+				ZenoUser ud=new ZenoUser(username,password);
 				session.setAttribute("user", ud.getUsername());
 				resp.sendRedirect("Dashboard.jsp");
 			}

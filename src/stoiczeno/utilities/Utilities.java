@@ -1,4 +1,4 @@
-package stoiczeno.model;
+package stoiczeno.utilities;
 
 public class Utilities
 {

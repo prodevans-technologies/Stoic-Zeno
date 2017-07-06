@@ -1,4 +1,4 @@
-package stoiczeno.model;
+package stoiczeno.pojo;
 
 public class RegistrationDetails
 {
@@ -13,7 +13,14 @@ public class RegistrationDetails
 	
 	public RegistrationDetails()
 	{
-		
+		this.customer_id = "";
+		this.first_name = "";
+		this.last_name = "";
+		this.email_id = "";
+		this.mobile_no = "";
+		this.address = "";
+		this.password = "";
+		this.profile_pic = "";
 	}
 	
 	public String getCustomer_id() {

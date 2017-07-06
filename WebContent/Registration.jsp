@@ -10,14 +10,16 @@
 
 <form action="RegistrationController" method="post">
 
-Customer _id <input type="text" name="customer_id">
-First Name <input type="text" name="first_name">
-last Name <input type="text" name="last_name">
-Email <input type="text" name="email_id">
-mobile <input type="text" name="mobile_no">
-Address <input type="text" name="address">
-password <input type="text" name="password">
-Select profile pic <input type="file" name="profile_pic">
+Customer _id <input type="text" name="customer_id"><br><br>
+First Name <input type="text" name="first_name"><br><br>
+last Name <input type="text" name="last_name"><br><br>
+Email <input type="text" name="email_id"><br><br>
+mobile <input type="text" name="mobile_no"><br><br>
+Address <input type="text" name="address"><br><br>
+password <input type="text" name="password"><br><br>
+Select profile pic <input type="text" name="profile_pic"><br><br>
+
+<input type="submit" value="Register">
 
 </form>
 

@@ -6,6 +6,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import stoiczeno.model.RegisterComplete;
+import stoiczeno.model.RegistrationDetails;
+
 public class RegistrationController extends HttpServlet 
 {
 	private static final long serialVersionUID = 1L;
@@ -26,11 +29,22 @@ public class RegistrationController extends HttpServlet
 		
 		try
 		{
+			RegistrationDetails rd=new RegistrationDetails(customer_id,first_name,last_name,email_id,mobile_no,address,password,profile_pic);
+			RegisterComplete rc=new RegisterComplete();
+			boolean result=rc.register(rd);
 			
+			if(result)
+			{
+				response.sendRedirect("Login.jsp");
+			}
+			else
+			{
+				System.out.println("something went wrong.....");
+			}
 		}
 		catch (Exception e)
 		{
-		
+			System.out.println(e);
 		}
 	}
 

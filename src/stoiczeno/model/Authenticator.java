@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 
-public class Authenticator
+public class Authenticator extends Utilities
 {
 
 	public boolean authenticate(String username, String password) throws SQLException
@@ -19,8 +19,8 @@ public class Authenticator
 		boolean result=false;
 		try
 		{
-			Class.forName("com.mysql.jdbc.Driver");
-			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/stoiczeno","root","root");
+			Class.forName(DriverName);
+			con=DriverManager.getConnection(URL,DBUserName,DBPassword);
 		    System.out.println("Connected....");
 			
 			st=con.createStatement();

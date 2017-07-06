@@ -9,8 +9,9 @@ import java.sql.Statement;
 
 import stoiczeno.pojo.RegistrationDetails;
 import stoiczeno.utilities.Utilities;
+import stoiczeno.utilities.ZenoConnection;
 
-public class RegisterComplete extends Utilities
+public class RegisterComplete implements Utilities
 {
 
 	public boolean register(RegistrationDetails rd) throws SQLException
@@ -22,9 +23,9 @@ public class RegisterComplete extends Utilities
 		boolean result=false;
 		try
 		{
-			Class.forName(DriverName);
-			con=DriverManager.getConnection(URL,DBUserName,DBPassword);
-		    System.out.println("Connected....");
+			con=ZenoConnection.getConnection();
+			
+			System.out.println("Connected....");
 			
 			String q="insert into user(customer_id,first_name,last_name,email,mobile,address,password) values(?,?,?,?,?,?,?)";
 			ps=con.prepareStatement(q);
@@ -51,10 +52,7 @@ public class RegisterComplete extends Utilities
 		{
 			System.out.println(e);
 		}
-		finally
-		{
-			con.close();
-		}
+		
 		if(result)
 			return result;
 		else

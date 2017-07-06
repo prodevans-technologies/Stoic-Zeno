@@ -7,9 +7,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import stoiczeno.utilities.Utilities;
+import stoiczeno.utilities.ZenoConnection;
 
 
-public class Authenticator extends Utilities
+public class Authenticator implements Utilities
 {
 
 	public boolean authenticate(String username, String password) throws SQLException
@@ -21,9 +22,7 @@ public class Authenticator extends Utilities
 		boolean result=false;
 		try
 		{
-			Class.forName(DriverName);
-			con=DriverManager.getConnection(URL,DBUserName,DBPassword);
-		    System.out.println("Connected....");
+			con = ZenoConnection.getConnection();
 			
 			st=con.createStatement();
 			String q="select * from user where customer_id like '"+username+"' and password like '"+password+"' ";
@@ -40,10 +39,7 @@ public class Authenticator extends Utilities
 		{
 			System.out.println(e);
 		}
-		finally
-		{
-			con.close();
-		}
+		
 		if(result)
 			return result;
 		else

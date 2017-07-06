@@ -1,6 +1,6 @@
 package stoiczeno.utilities;
 
-public class Utilities
+public 	interface Utilities
 {
 	public String DBUserName="root";
 	public String DBPassword="root";

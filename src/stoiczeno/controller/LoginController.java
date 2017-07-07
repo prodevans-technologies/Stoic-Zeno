@@ -39,8 +39,9 @@ public class LoginController extends HttpServlet
 				session.setAttribute("user", ud.getUsername());
 				resp.sendRedirect("Dashboard.jsp");
 			}
-			else
-				resp.sendRedirect("Errors.jsp");
+			else{
+				//resp.sendRedirect("Errors.jsp");
+			}
 			
 		}
 		catch (Exception e)

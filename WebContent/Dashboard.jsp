@@ -1,17 +1,14 @@
 <%@page import="stoiczeno.model.GetDashboardData"%>
 <%@page import="stoiczeno.pojo.BillData"%>
 <%
-if( (session.getAttribute("user")) == null )
-{
-     response.sendRedirect("Login.jsp");
-}
-else
-{
-	String username=(String)session.getAttribute("user");
+	if ((session.getAttribute("user")) == null) {
+		response.sendRedirect("Login.jsp");
+	} else {
+		String username = (String) session.getAttribute("user");
 %>
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html  >
 <html>
 <head>
@@ -21,39 +18,48 @@ else
 <body>
 
 
-<h1>Welcome  :  <%=username %>  to Dashboard</h1>
-<a href="Logout.jsp">Logout</a>
+	<h1>
+		Welcome :
+		<%=username%>
+		to Dashboard
+	</h1>
+	<a href="Logout.jsp">Logout</a>
 
-<br><br>
+	<br>
+	<br>
 
-<%
-BillData bd=new GetDashboardData().GetData((String)session.getAttribute("user"));
-if (bd!=null)
-{
-%>
+	<%
+		BillData bd = new GetDashboardData().GetData((String) session.getAttribute("user"));
+			if (bd != null) {
+	%>
 
-<h1>Customer ID : <%=bd.getCustomer_id() %></h1>
-<h1>DateD : <%=bd.getDate() %></h1>
-<h1>Current Bill : <%=bd.getCurrent_bill() %></h1>
-<<<<<<< HEAD
-<h1>Billed Amount : <%=bd.getUnbilled_amount() %></h1>
-=======
-<h1>Unbilled Amount : <%=bd.getUnbilled_amount() %></h1>
-<%
-}
-else
-{
-%>
+	<h1>
+		Customer ID :
+		<%=bd.getCustomer_id()%></h1>
+	<h1>
+		DateD :
+		<%=bd.getDate()%></h1>
+	<h1>
+		Current Bill :
+		<%=bd.getCurrent_bill()%></h1>
+
+	<h1>
+		Billed Amount :
+		<%=bd.getUnbilled_amount()%></h1>
+
+	<%
+		} else {
+	%>
 	<h1>Data Not Found</h1>
-<%
-}
-%>
-
->>>>>>> 9543e0860d1ce1849f52a3c40831f8adc428dd44
+	<%
+		}
+	%>
 
 
-<%
-}
-%>
+
+
+	<%
+		}
+	%>
 </body>
 </html>

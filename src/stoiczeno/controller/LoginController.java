@@ -23,6 +23,8 @@ public class LoginController extends HttpServlet
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
 	{
+		PrintWriter out=resp.getWriter();
+		
 		HttpSession session=req.getSession();
 		try
 		{
@@ -43,6 +45,7 @@ public class LoginController extends HttpServlet
 		}
 		catch (Exception e)
 		{
+			out.print("Error : "+e.getMessage());
 		}
 			
 	}

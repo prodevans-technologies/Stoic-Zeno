@@ -23,6 +23,8 @@ public class LoginController extends HttpServlet
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
 	{
+		PrintWriter out=resp.getWriter();
+		
 		HttpSession session=req.getSession();
 		try
 		{
@@ -37,12 +39,14 @@ public class LoginController extends HttpServlet
 				session.setAttribute("user", ud.getUsername());
 				resp.sendRedirect("Dashboard.jsp");
 			}
-			else
-				resp.sendRedirect("Errors.jsp");
+			else{
+				//resp.sendRedirect("Errors.jsp");
+			}
 			
 		}
 		catch (Exception e)
 		{
+			out.print("Error : "+e.getMessage());
 		}
 			
 	}

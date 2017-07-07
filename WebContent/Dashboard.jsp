@@ -12,7 +12,7 @@ else
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html  >
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -33,7 +33,7 @@ BillData bd=new GetDashboardData().GetData();
 <h1>Customer ID : <%=bd.getCustomer_id() %></h1>
 <h1>DateD : <%=bd.getDate() %></h1>
 <h1>Current Bill : <%=bd.getCurrent_bill() %></h1>
-<h1>Unbilled Amount : <%=bd.getUnbilled_amount() %></h1>
+<h1>Billed Amount : <%=bd.getUnbilled_amount() %></h1>
 
 
 <%

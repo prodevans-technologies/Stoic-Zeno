@@ -1,3 +1,5 @@
+<%@page import="stoiczeno.model.GetDashboardData"%>
+<%@page import="stoiczeno.pojo.BillData"%>
 <%
 if( (session.getAttribute("user")) == null )
 {
@@ -21,6 +23,18 @@ else
 
 <h1>Welcome  :  <%=username %>  to Dashboard</h1>
 <a href="Logout.jsp">Logout</a>
+
+<br><br>
+
+<%
+BillData bd=new GetDashboardData().GetData();
+%>
+
+<h1>Customer ID : <%=bd.getCustomer_id() %></h1>
+<h1>DateD : <%=bd.getDate() %></h1>
+<h1>Current Bill : <%=bd.getCurrent_bill() %></h1>
+<h1>Unbilled Amount : <%=bd.getUnbilled_amount() %></h1>
+
 
 <%
 }

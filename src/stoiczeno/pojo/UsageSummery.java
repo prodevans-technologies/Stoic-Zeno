@@ -8,6 +8,8 @@ public class UsageSummery {
 	private String Location;
 	private String Time;
 	private String Usage;
+	
+	private long totalMobileUsage;
 	/**
 	 * @return the customerId
 	 */
@@ -32,21 +34,19 @@ public class UsageSummery {
 	public void setDate(String date) {
 		Date = date;
 	}
-	/**
-	 * @return the device
-	 */
-	public String getDevice() {
-		return Device;
+	
+	public long getDevice()
+	{
+		return totalMobileUsage;
 	}
 	/**
 	 * @param device the device to set
-	 */
-	public void setDevice(String device) {
-		Device = device;
+	 **/
+	public void setDevice(String device) 
+	{
+		this.Device = device;
 	}
-	/**
-	 * @return the content
-	 */
+	
 	public String getContent() {
 		return Content;
 	}

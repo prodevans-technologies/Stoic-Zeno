@@ -1,20 +1,16 @@
 package stoiczeno.model;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-
 import stoiczeno.pojo.RegistrationDetails;
-import stoiczeno.utilities.Utilities;
 import stoiczeno.utilities.ZenoConnection;
 
-public class RegisterComplete implements Utilities
+
+public class RegisterComplete 
 {
 
-	public boolean register(RegistrationDetails rd) throws SQLException
+	public boolean register(RegistrationDetails rd) throws SQLException,Exception
 	{
 		
 		Connection con=null;
@@ -23,7 +19,7 @@ public class RegisterComplete implements Utilities
 		boolean result=false;
 		try
 		{
-			con=ZenoConnection.getConnection();
+			con = ZenoConnection.getConnection();
 			
 			System.out.println("Connected....");
 			
@@ -36,7 +32,7 @@ public class RegisterComplete implements Utilities
 			ps.setDouble(5, Double.parseDouble( rd.getMobile_no() ));
 			ps.setString(6, rd.getAddress());
 			ps.setString(7, rd.getPassword());
-
+			//ps.setBlob(8, rd.getProfile_pic());
 			int cnt=ps.executeUpdate();
 			if(cnt>0)
 			{

@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<form action="RegistrationController" method="post">
+<form action="RegistrationController"   method="post" >
 
 Customer _id <input type="text" name="customer_id"><br><br>
 First Name <input type="text" name="first_name"><br><br>
@@ -17,7 +17,7 @@ Email <input type="text" name="email_id"><br><br>
 mobile <input type="text" name="mobile_no"><br><br>
 Address <input type="text" name="address"><br><br>
 password <input type="text" name="password"><br><br>
-Select profile pic <input type="text" name="profile_pic"><br><br>
+
 
 <input type="submit" value="Register">
 

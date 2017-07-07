@@ -10,7 +10,7 @@ import stoiczeno.utilities.ZenoConnection;
 public class GetDashboardData 
 {
 
-	public BillData GetData()
+	public BillData GetData(String customer_id)
 	{
 		Connection con=null;
 		Statement st;
@@ -21,7 +21,7 @@ public class GetDashboardData
 			con = ZenoConnection.getConnection();
 			
 			st=con.createStatement();
-			String q="select * from bill where r_id in (select max(r_id) from bill where customer_id like 123)";
+			String q="select * from bill where r_id in (select max(r_id) from bill where customer_id like '"+customer_id+"'  )";
 			rs=st.executeQuery(q);
 			BillData bd=null;
 			if(rs.next())

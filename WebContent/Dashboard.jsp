@@ -27,13 +27,29 @@ else
 <br><br>
 
 <%
-BillData bd=new GetDashboardData().GetData();
+BillData bd=new GetDashboardData().GetData((String)session.getAttribute("user"));
+if (bd!=null)
+{
 %>
 
 <h1>Customer ID : <%=bd.getCustomer_id() %></h1>
 <h1>DateD : <%=bd.getDate() %></h1>
 <h1>Current Bill : <%=bd.getCurrent_bill() %></h1>
+<<<<<<< HEAD
 <h1>Billed Amount : <%=bd.getUnbilled_amount() %></h1>
+=======
+<h1>Unbilled Amount : <%=bd.getUnbilled_amount() %></h1>
+<%
+}
+else
+{
+%>
+	<h1>Data Not Found</h1>
+<%
+}
+%>
+
+>>>>>>> 9543e0860d1ce1849f52a3c40831f8adc428dd44
 
 
 <%

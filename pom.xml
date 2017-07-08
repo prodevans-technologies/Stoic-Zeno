@@ -7,7 +7,9 @@
 	<packaging>war</packaging>
 	<name>Stoic-Zeno</name>
 	<description>Stoic Zeno Portal</description>
+	
 	<build>
+		<finalName>Stoic-Zeno</finalName>	
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
 			<plugin>

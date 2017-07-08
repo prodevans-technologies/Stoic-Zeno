@@ -36,7 +36,7 @@ public class LoginController extends HttpServlet
 				resp.sendRedirect("Dashboard.jsp");
 			}
 			else
-				resp.sendRedirect("Login.jsp?error='login-fail'");
+				resp.sendRedirect("portal.jsp?error='login-fail'");
 			
 		}
 		catch (Exception e)

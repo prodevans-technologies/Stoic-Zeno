@@ -44,6 +44,9 @@ public class LoginController extends HttpServlet
 =======
 			else
 				resp.sendRedirect("portal.jsp?error='login-fail'");
+<<<<<<< HEAD
+>>>>>>> dev
+=======
 >>>>>>> dev
 			
 		}

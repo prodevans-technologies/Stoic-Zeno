@@ -10,9 +10,6 @@
 		response.sendRedirect("Login.jsp");
 
 	} 
-
-
-
 	String username = (String) session.getAttribute("user");
 %>
 
@@ -37,7 +34,6 @@
 	<br>
 
 	<%
-
 		BillData bd = new GetDashboardData().GetBillData((String) session.getAttribute("user"));
 			if (bd != null) {
 	%>
@@ -61,7 +57,7 @@
 	%>
 
 		
-	%>
+	
 	<h1>Data Not Found</h1>
 	<%
 		}
@@ -81,11 +77,11 @@
 		List< UsageSummery> list=getData.GetDeviceUsage(username, "mobile");
 		
 		for(UsageSummery summery : list){
-			out.print("<tr> <th>"+summery.getDate()+"</th>		"+
-		"			<th>"+summery.getContent()+"</th>		"+
-					"			<th>"+summery.getLocation()+"</th>		"+
-		"			<th>"+summery.getTime()+"</th>"
-		+"<th>"+summery.getUsage()+"</th></tr>");
+			out.print("<tr> <th>"+summery.getDate()+"</th>"+
+					"<th>"+summery.getContent()+"</th>"+
+					"<th>"+summery.getLocation()+"</th>"+
+					"<th>"+summery.getTime()+"</th>"
+					+"<th>"+summery.getUsage()+"</th></tr>");
 			
 		}
 	%>

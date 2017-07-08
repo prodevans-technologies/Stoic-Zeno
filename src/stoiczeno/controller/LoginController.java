@@ -1,6 +1,7 @@
 package stoiczeno.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -37,18 +38,9 @@ public class LoginController extends HttpServlet
 				session.setAttribute("user", ud.getUsername());
 				resp.sendRedirect("Dashboard.jsp");
 			}
-<<<<<<< HEAD
-			else{
-				//resp.sendRedirect("Errors.jsp");
-			}
-=======
 			else
 				resp.sendRedirect("portal.jsp?error='login-fail'");
-<<<<<<< HEAD
->>>>>>> dev
-=======
->>>>>>> dev
-			
+
 		}
 		catch (Exception e)
 		{

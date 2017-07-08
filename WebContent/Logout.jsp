@@ -14,7 +14,7 @@
 if(session!=null)
 {
  session.invalidate();
- response.sendRedirect("Login.jsp");
+ response.sendRedirect("portal.jsp?logout=''");
 }
 %>
 

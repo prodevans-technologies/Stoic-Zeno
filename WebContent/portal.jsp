@@ -1,3 +1,4 @@
+<%@page import="java.util.Map"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 	
@@ -144,14 +145,16 @@
 					  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					  <strong>Login Fail!!!</strong> Please check username and password...
 					</div>	
-					<%	}  %>
+					<% }  %>
 					
 					<% 	if (request.getParameter("logout") != null) { %>
 					<div class="alert alert-info alert-dismissible" role="alert" style="margin-top:30px">
 					  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					  <strong>Successfully logout...</strong> Please login again...
+					  
+					  
 					</div>	
-					<%	}  %>
+					<% }  %>
 					<div class="col-md-12 col-xs-12 login_control"
 						style="background-color: white; padding: 10px">
 						<form action="LoginController" method="POST">

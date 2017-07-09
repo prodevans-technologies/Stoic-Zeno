@@ -338,7 +338,7 @@
 								<div class="portfolio-box-caption-content">
 									<div class="project-category text-faded">Local weather</div>
 									<i class="fa fa-4x fa-cloud text-primary sr-icons"></i>
-									<div class="project-name">Project Name</div>
+									<div class="project-name">Bangalore</div>
 								</div>
 							</div>
 						</div>

@@ -37,9 +37,9 @@ public class RegistrationController extends HttpServlet {
 			boolean result = rc.register(rd);
 
 			if (result) {
-				response.sendRedirect("Login.jsp?register=success");
+				response.sendRedirect("portal.jsp?register=success");
 			} else {
-				response.sendRedirect("Login.jsp?register=fail");
+				response.sendRedirect("portal.jsp?register=fail");
 			}
 		} catch (Exception e) {
 			System.out.println(e.getMessage());

@@ -7,7 +7,7 @@
     pageEncoding="ISO-8859-1"%>
 <%
 	if ((session.getAttribute("user")) == null) {
-		response.sendRedirect("Login.jsp");
+		response.sendRedirect("portal.jsp");
 
 	} 
 	String username = (String) session.getAttribute("user");
@@ -86,6 +86,9 @@
 		}
 	%>
 	</table>
+	
+	
+	
 
 </body>
 </html>
